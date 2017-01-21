@@ -12,7 +12,15 @@
  */
 #include <iostream>
 #include <vector>
+#include <math.h>
+#include <utility>
 #include "Pair.h"
+#include "ChargingStation.h"
+#define R 6378.137
+#define PI 3.1415926
+
+
+
 using namespace std;
 #ifndef SEARCH_H
 #define SEARCH_H
@@ -22,7 +30,10 @@ public:
 //    
 //    Pair input_points; 
 //    vector<int> stations;
-//    Search(Pair, const vector<int> & );
+    vector<ChargingStation> search_array(Pair, const vector<ChargingStation> & );
+    double calcDis(Pair, Pair);
+    double toRadians(double);
+    void sort(vector<pair<ChargingStation,double>> & lowestThree);
 private:
     
 

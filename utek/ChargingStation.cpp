@@ -18,25 +18,25 @@ ChargingStation::~ChargingStation()
     //nothing here
 }
 
-Pair ChargingStation::getPair()
+Pair ChargingStation::getPair() const
 {
     // return the latitude longitude pair
     return p;
 }
 
-string ChargingStation::getCity()
+string ChargingStation::getCity() const
 {
     // return the city
     return city;
 }
 
-string ChargingStation::getName()
+string ChargingStation::getName() const
 {
     // return station name;
     return name;
 }
 
-int ChargingStation::getID()
+int ChargingStation::getID() const
 {
     // return station ID
     return id;

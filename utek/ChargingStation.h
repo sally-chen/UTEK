@@ -27,10 +27,10 @@ class ChargingStation
         ~ChargingStation();
 
         // accessor functions
-        Pair getPair();
-        string getName();
-        string getCity();
-        int getID();
+        Pair getPair() const;
+        string getName() const;
+        string getCity() const;
+        int getID() const;
 
         // mutator functions
         void setPair(Pair _p);
