@@ -12,6 +12,7 @@
  */
 
 #include <cstdlib>
+#include "MyParser.h"
 
 using namespace std;
 
@@ -28,6 +29,7 @@ int main(int argc, char** argv) {
     //get the three entries with the smallest distances
     
     //list will be 1D array of object
+    MyParser::getFuelStationVector("charging_stations.json");
     return 0;
 }
 
