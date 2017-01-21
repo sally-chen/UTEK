@@ -17,7 +17,9 @@ MyParser::~MyParser() {
     // nothing
 }
 
-MyParser::ParserError MyParser::getFuelStationVector(std::string filePath) {
+MyParser::ParserError MyParser::getFuelStationVector(std::string filePath,
+        std::vector<ChargingStation>& array) {
+    array.clear();
     
     // read json string from file
     std::ifstream test (filePath);
@@ -48,13 +50,14 @@ MyParser::ParserError MyParser::getFuelStationVector(std::string filePath) {
     // populate vector with fuel stations
     json11::Json::array items = fuel_stations.array_items();
     for (auto iter = items.begin(); iter != items.end(); ++iter) {
-        //TODO: store these variables in parameter[in] vector
         int id = (int) ((*iter)["id"].number_value());
         double lat = (*iter)["latitude"].number_value();
         double lon = (*iter)["longitude"].number_value();
         std::string name = (*iter)["station_name"].string_value();
         std::string city = (*iter)["city"].string_value();
         
-        std::cout << name << city <<lat << " " << lon << " " << id << std::endl;
+        Pair newLatLon (lon, lat);
+        ChargingStation newStation (newLatLon, name, city, id);
+        array.push_back(newStation);
     }
 }

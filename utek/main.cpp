@@ -13,6 +13,9 @@
 
 #include <cstdlib>
 #include "MyParser.h"
+#include "ChargingStation.h"
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -29,7 +32,12 @@ int main(int argc, char** argv) {
     //get the three entries with the smallest distances
     
     //list will be 1D array of object
-    MyParser::getFuelStationVector("charging_stations.json");
+    
+    std::vector<ChargingStation> array;
+    MyParser::getFuelStationVector("charging_stations.json", array);
+    for (auto iter = array.begin(); iter != array.end(); ++iter){
+        std::cout << iter->getID() << " " << iter->getName() << std::endl;
+    }
     return 0;
 }
 

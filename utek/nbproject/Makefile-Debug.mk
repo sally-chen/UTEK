@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/ChargingStation.o \
 	${OBJECTDIR}/MyParser.o \
 	${OBJECTDIR}/Pair.o \
 	${OBJECTDIR}/Search.o \
@@ -65,6 +66,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/utek.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/utek ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/ChargingStation.o: ChargingStation.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ChargingStation.o ChargingStation.cpp
 
 ${OBJECTDIR}/MyParser.o: MyParser.cpp 
 	${MKDIR} -p ${OBJECTDIR}

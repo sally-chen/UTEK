@@ -29,6 +29,8 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>ChargingStation.cpp</itemPath>
+    <itemPath>ChargingStation.h</itemPath>
     <itemPath>MyParser.cpp</itemPath>
     <itemPath>MyParser.h</itemPath>
     <itemPath>json11.cpp</itemPath>
@@ -47,6 +49,10 @@
           <commandLine>-std=c++11</commandLine>
         </ccTool>
       </compileType>
+      <item path="ChargingStation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ChargingStation.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="MyParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MyParser.h" ex="false" tool="3" flavor2="0">
@@ -86,6 +92,10 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="ChargingStation.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ChargingStation.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="MyParser.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MyParser.h" ex="false" tool="3" flavor2="0">

@@ -10,7 +10,8 @@
 
 #include "json11.hpp"
 #include <string>
-
+#include <vector>
+#include "ChargingStation.h"
 
 class MyParser {
 public:
@@ -22,7 +23,8 @@ public:
     MyParser();
     ~MyParser();
     
-    static ParserError getFuelStationVector(std::string filePath);
+    static ParserError getFuelStationVector(std::string filePath,
+            std::vector<ChargingStation>& array);
     
 private:
     

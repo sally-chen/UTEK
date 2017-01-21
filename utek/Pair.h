@@ -14,10 +14,11 @@
 #ifndef PAIR_H
 #define PAIR_H
 class Pair{
+public:
     double lattitude;
     double longitude;
-    
-    Pair(double, double);
+    Pair();
+    Pair(double _long, double _latt);
     Pair& operator=(const Pair &rhs);
 };
 

@@ -7,10 +7,10 @@ ChargingStation::ChargingStation()
 
 ChargingStation::ChargingStation(Pair _p, string _name, string _city, int _id)
 {
-    Pair p = _p;
-    string name = _name;
-    string city = _city;
-    int id = _id;
+    p = _p;
+    name = _name;
+    city = _city;
+    id = _id;
 }
 
 ChargingStation::~ChargingStation()
@@ -42,22 +42,22 @@ int ChargingStation::getID()
     return id;
 }
 
-void setPair(Pair _p)
+void ChargingStation::setPair(Pair _p)
 {
     p = _p;
 }
 
-void setName(string _name)
+void ChargingStation::setName(string _name)
 {
     name = _name;
 }
 
-void setCity(string _city)
+void ChargingStation::setCity(string _city)
 {
     city = _city;
 }
 
-void setID(int _id)
+void ChargingStation::setID(int _id)
 {
     id = _id;
 }

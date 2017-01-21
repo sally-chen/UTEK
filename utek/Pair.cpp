@@ -5,6 +5,10 @@
  */
 #include "Pair.h"
 
+Pair::Pair() {
+    // do nothing
+}
+
 Pair::Pair(double _long, double _latt) : longitude(_long),lattitude(_latt){
 
 }

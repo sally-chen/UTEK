@@ -8,13 +8,16 @@
 
 
 
+#ifndef CHARGINGSTATION_H
+#define CHARGINGSTATION_H
+
+
 #include <string>
 #include <cstdlib>
 #include "Pair.h"
 
-#ifndef CHARGINGSTATION_H
-#define CHARGINGSTATION_H
 
+using namespace std;
 
 class ChargingStation
 {
