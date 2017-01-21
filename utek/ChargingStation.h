@@ -1,3 +1,13 @@
+/* Simple class for charging stations including:
+ *      (Latitude, Longitude) Pair
+ *      Name of the station
+ *      City
+ *      ID
+ * Accessor and Mutator functions are provided
+ */
+
+
+
 #include <string>
 #include <cstdlib>
 #include "Pair.h"
