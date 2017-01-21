@@ -16,7 +16,10 @@
 class Pair{
     double lattitude;
     double longitude;
-}
+    
+    Pair(double, double);
+    Pair& operator=(const Pair &rhs);
+};
 
 
 #endif /* PAIR_H */
